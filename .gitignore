@@ -1,0 +1,12 @@
+# Maven & Eclipse
+target/
+.settings/
+.classpath
+.project
+.apt_generated
+.factorypath
+bin/
+
+# Système
+.DS_Store
+Thumbs.db
