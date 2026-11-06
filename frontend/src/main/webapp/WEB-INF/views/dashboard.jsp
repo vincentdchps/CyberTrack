@@ -7,33 +7,27 @@
 </head>
 <body>
 
-<h1>🔐 Sentinel — Tableau de bord</h1>
-<p>Surveillez l'état de sécurité de votre parc informatique.</p>
+<h1> CyberTrack - Dashboard</h1>
 
-<!-- Compteurs [4] -->
 <table border="1" cellpadding="15">
     <tr>
         <td>
             <strong>Incidents critiques</strong><br/>
-            <h2 style="color:red;">
                 <c:out value="${nbCritiques}"/>
             </h2>
         </td>
         <td>
             <strong>En cours</strong><br/>
-            <h2 style="color:orange;">
                 <c:out value="${nbEnCours}"/>
             </h2>
         </td>
         <td>
             <strong>Résolus</strong><br/>
-            <h2 style="color:green;">
                 <c:out value="${nbResolus}"/>
             </h2>
         </td>
         <td>
             <strong>Total</strong><br/>
-            <h2 style="color:blue;">
                 <c:out value="${totalIncidents}"/>
             </h2>
         </td>
@@ -42,7 +36,6 @@
 
 <br/>
 
-<!-- Derniers incidents -->
 <h2>Derniers incidents</h2>
 <table border="1" cellpadding="8">
     <thead>
