@@ -7,8 +7,8 @@ public class Incident {
     private int id;
     private String titre;
     private String description;
-    private String severite;  // CRITIQUE / ÉLEVÉ / MOYEN / FAIBLE
-    private String statut;    // OUVERT / EN_COURS / RESOLU
+    private String severite;  
+    private String statut;   
     private LocalDate dateDetection;
     private String equipement;
     private String analyste;

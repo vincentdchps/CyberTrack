@@ -1,10 +1,14 @@
 package fr.univ.CyberTrack.dao;
 
-import fr.univ.CyberTrack.model.Incident;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDate;
-import java.util.*;
+import fr.univ.CyberTrack.model.Incident;
 
 @Repository
 public class IncidentDAO {
@@ -14,25 +18,25 @@ public class IncidentDAO {
 
     public IncidentDAO() {
         add(new Incident(0,
-            "Ransomware détecté",
-            "Chiffrement de fichiers sur Serveur-Prod-01",
+            "Virus détecté",
+            "",
             "CRITIQUE", "EN_COURS",
             LocalDate.of(2026, 10, 1),
-            "Serveur-Prod-01", "Vincent Deschamps"));
+            "Serveur-1", "Vincent"));
 
         add(new Incident(0,
-            "Tentative de phishing",
-            "Email frauduleux reçu par 3 employés",
+            "Phishing",
+            "",
             "MOYEN", "OUVERT",
             LocalDate.of(2026, 10, 2),
-            "Poste-RH-03", "Alex Martin"));
+            "Windows-2", "Axel"));
 
         add(new Incident(0,
-            "Scan de port détecté",
-            "Scan réseau externe sur le pare-feu",
+            "Scan de ports détecté",
+            "",
             "ÉLEVÉ", "RESOLU",
             LocalDate.of(2026, 9, 28),
-            "Firewall-01", "Vincent Deschamps"));
+            "Firewall-4", "Vincent"));
     }
 
     public void add(Incident i) {
