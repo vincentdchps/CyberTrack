@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sentinel - Dashboard</title>
+    <title>CyberTrack - Dashboard</title>
 </head>
 <body>
 

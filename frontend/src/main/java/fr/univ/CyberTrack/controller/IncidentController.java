@@ -36,7 +36,7 @@ public class IncidentController {
     @GetMapping("/new")
     public String nouveauFormulaire(Model model) {
         model.addAttribute("incident", new Incident());
-        return "formulaireIncident";
+        return "AddIncident";
     }
 
     @GetMapping("/{id}/edit")
@@ -72,7 +72,7 @@ public class IncidentController {
         return "redirect:/incidents";
     }
 
-    @GetMapping("/{id}/delete")
+    @PostMapping("/{id}/delete")
     public String supprimer(@PathVariable int id) {
         incidentDAO.remove(id);
         return "redirect:/incidents";
