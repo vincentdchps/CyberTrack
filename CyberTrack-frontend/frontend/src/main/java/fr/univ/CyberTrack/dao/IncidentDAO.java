@@ -13,7 +13,7 @@ import fr.univ.CyberTrack.model.Incident;
 @Repository
 public class IncidentDAO {
 
-    private Map<Integer, Incident> incidents = new HashMap<>();
+    private Map<Long, Incident> incidents = new HashMap<>();
     private int nextId = 1;
 
     public IncidentDAO() {
@@ -44,7 +44,7 @@ public class IncidentDAO {
         incidents.put(i.getId(), i);
     }
 
-    public Incident get(int id) {
+    public Incident get(long id) {
         return incidents.get(id);
     }
 
@@ -56,7 +56,7 @@ public class IncidentDAO {
         incidents.put(i.getId(), i);
     }
 
-    public void remove(int id) {
+    public void remove(long id) {
         incidents.remove(id);
     }
 
