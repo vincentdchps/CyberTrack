@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Incident {
 
-    private int id;
+    private long id;
     private String titre;
     private String description;
     private String severite;  
