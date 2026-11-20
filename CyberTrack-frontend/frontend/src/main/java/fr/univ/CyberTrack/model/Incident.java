@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Incident {
 
-    private int id;
+    private long id;
     private String titre;
     private String description;
     private String severite;  
@@ -15,7 +15,7 @@ public class Incident {
 
     public Incident() {}
 
-    public Incident(int id, String titre, String description,
+    public Incident(long id, String titre, String description,
                     String severite, String statut,
                     LocalDate dateDetection,
                     String equipement, String analyste) {
@@ -30,8 +30,8 @@ public class Incident {
     }
 
     
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public long getId() { return id; }
+    public void setId(long id) { this.id = id; }
 
     public String getTitre() { return titre; }
     public void setTitre(String titre) { this.titre = titre; }
