@@ -6,6 +6,7 @@ target/
 .apt_generated
 .factorypath
 bin/
+.metadata/
 
 # Système
 .DS_Store
