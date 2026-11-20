@@ -3,10 +3,15 @@ package fr.univ.CyberTrack_backend.model;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
-
+@Entity
+@Table(name = "equipement")
 public class Equipement {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
+    @Id 
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    private Long id;
     private String nom;
     private String ip;
     private String type;
@@ -18,6 +23,7 @@ public class Equipement {
         this.ip = ip;
         this.type = type;
     }
+    public Equipement() {}
 
     public Long getId() {
         return id;

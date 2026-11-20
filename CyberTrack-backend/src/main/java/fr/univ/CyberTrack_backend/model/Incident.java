@@ -1,24 +1,38 @@
 package fr.univ.CyberTrack_backend.model;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "incident")
 public class Incident {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String titre;
     private String description;
     private String severite;  
     private String statut;   
     private LocalDate dateDetection;
-    private String equipement;
-    private String analyste;
+    @ManyToOne
+    @JoinColumn(name = "equipement_id")
+    private Equipement equipement;
+    @ManyToOne
+    @JoinColumn(name = "analyste_id")
+    private Analyste analyste;
 
     public Incident() {}
 
     public Incident(long id, String titre, String description,
                     String severite, String statut,
                     LocalDate dateDetection,
-                    String equipement, String analyste) {
+                    Equipement equipement, Analyste analyste) {
         this.id = id;
         this.titre = titre;
         this.description = description;
@@ -48,9 +62,9 @@ public class Incident {
     public LocalDate getDateDetection() { return dateDetection; }
     public void setDateDetection(LocalDate dateDetection) { this.dateDetection = dateDetection; }
 
-    public String getEquipement() { return equipement; }
-    public void setEquipement(String equipement) { this.equipement = equipement; }
+    public Equipement getEquipement() { return equipement; }
+    public void setEquipement(Equipement equipement) { this.equipement = equipement; }
 
-    public String getAnalyste() { return analyste; }
-    public void setAnalyste(String analyste) { this.analyste = analyste; }
+    public Analyste getAnalyste() { return analyste; }
+    public void setAnalyste(Analyste analyste) { this.analyste = analyste; }
 }
