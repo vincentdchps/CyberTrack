@@ -16,9 +16,6 @@ public class IncidentDAO {
     private long nextId = 4L;
 
     public IncidentDAO() {
-        save(new Incident(1, "Incident 1", "Description de l'incident 1", "CRITIQUE", "EN_COURS", LocalDate.of(2026, 10, 1), "Serveur-1", "Vincent"));
-        save(new Incident(2, "Incident 2", "Description de l'incident 2", "MOYEN", "OUVERT", LocalDate.of(2026, 10, 2), "Windows-2", "Axel"));
-        save(new Incident(3, "Incident 3", "Description de l'incident 3", "ÉLEVÉ", "RESOLU", LocalDate.of(2026, 9, 28), "Firewall-4", "Vincent"));
     }
 
     public Incident save(Incident incident) {
