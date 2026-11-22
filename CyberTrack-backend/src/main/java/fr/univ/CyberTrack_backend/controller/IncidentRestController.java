@@ -28,7 +28,7 @@ public IncidentRestController(IncidentService service) {
     this.service = service ;
 }
 
-    @GetMapping
+@GetMapping
 public ResponseEntity<List<IncidentDTO>> getAll() {
     return ResponseEntity.ok(service.getAll());
 }
